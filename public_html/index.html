@@ -1,0 +1,87 @@
+<!doctype html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+function changeDropDown(strUser) {
+    var text
+	if (strUser == "reddit"){
+		text = "REDDIT";
+	} else if (strUser == "tony") {
+			text = "TONYY";
+			}
+		else if (strUser == "John"){
+				text = "JOHN WAS HERE";
+			}
+			else if (strUser == "Previous Pages"){
+					text = "Why would you choose this one";
+				}
+	document.getElementByID("toChange").innerHtml = text
+}
+</script>
+<style>
+h1 {
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+#toChange {
+	font-size: 60px;
+	text-align: center;
+	font-style: italic; 
+}
+#nav {
+	text-align:center;
+	list-style: none;
+	margin-bottom: 10px;
+	height: 40px;
+	width:100%;
+	background-color:blue;
+	font-weight: bold;
+
+}
+#nav ul{
+	list-style-type: none;
+	margin: 0px;
+
+}
+#nav li {
+	margin: 0px;
+	display:
+}
+#nav li a {
+	padding:10px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	background-color:blue;
+	float:left;
+}
+#nav li a:hover{
+	background-color:red;
+}
+</style>
+<h1> Thultech Industries </h1>
+<div id="nav">
+	<ul>
+		<li><a href="#">Home</a>
+		</li>
+		<li><a href="#">Interesting Links</a>
+		</li>
+		<li><a href="#">More Links</a>
+		</li>
+		<li><a href="#">filler</a>
+		</li>
+		<li><a href="#">filler</a>
+		</li>
+		<li><a href="#">filler</a>
+		</li>
+	</ul>
+</div>
+<select id="whatPage" onchange="changeDropDown(this.value)">
+		<option value="reddit">Reddit</option>
+		<option value="previous pages">Previous Pages</option>
+		<option value="John"> John </option>
+		<option value="tony"> Tony </option>
+</select>
+<input type="submit" value="Submit">
+<div id="toChange"> This is going to be changed when you change the drop down selection</div>
+<div id="test"> This is going to be changed when you change the drop down selection</div>
