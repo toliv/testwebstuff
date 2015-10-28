@@ -1,10 +1,60 @@
+<!doctype html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<style>
+#Header{
+	color:orange;
+}
+img {
+    opacity:1.0;
+    transition: opacity 0.45s ease-in-out;
+    -moz-transition: opacity 0.45s ease-in-out;
+    -webkit-transition: opacity 0.55s ease-in-out;
+}
+img:hover{
+	opacity: 0.6;
+    transition: opacity .45s ease-in-out;
+    -moz-transition: opacity .45s ease-in-out;
+    -webkit-transition: opacity .45s ease-in-out;
+}
+#Stats{
+	position: absolute;
+	left:115px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$("#Header h1").hover(function(){
+		$(this).html("now its not");`
+	},
+	function(){
+		$(this).html("Speed Calculator");
+	})
+	$("form").submit(function(){
+		
+	})
+})
+</script>
 <body>
-
-<div id = "Header">
-<h1> "Speed Calculator"</h1>
-</div>
-<div>
-<input id="distance" type="number" value="Distance" />
-</div>
+	<div id = "Header">
+		<h1> "Speed Calculator"</h1>
+	</div>
+	<div id  = "form">
+		<form>
+		  Distance:<br>
+		  <input type="text" name="distance" value="">
+		  <br>
+		  Time:<br>
+		  <input type="text" name="time" value="">
+		  <br><br>
+		  <input type="submit" value="Submit">
+		</form>
+	</div>
+	<div id = "Stats">
+		<h1>"We do stats!"</h1>
+	</div>
+	<br><br><br><br>
+	<img src = "piechart.png" alt = "Pie Chart" style = "width:650px;height:400px;">
 </body>
 
