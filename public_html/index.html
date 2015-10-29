@@ -1,10 +1,9 @@
 <!doctype html>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 function changeDropDown() {
     var text
     strUser = document.getElementById("whatPage").value
-    console.log(strUser);
 	if (strUser == "reddit"){
 		text = "REDDIT";
 	} else if (strUser == "tony") { 
@@ -21,13 +20,7 @@ function changeDropDown() {
 	document.getElementById("toChange").innerHTML = text
 }
 </script>
-<script>
-$(document).ready(function() {
-    $("input").click(function(){
-                      changeDropDown();
-                      })
-})
-</script>
+
 <style>
 h1 {
 	font-size: 40px;
@@ -87,14 +80,12 @@ h1 {
 		</li>
 	</ul>
 </div>
-<form>
--	<select id="whatPage">
+	<select id="whatPage">
 			<option value="reddit">Reddit</option>
 			<option value="Previous Pages">Previous Pages</option>
 			<option value="John"> John </option>
 			<option value="tony"> Tony </option>
 	</select>
 	<button id="hitMe" onClick="changeDropDown()"> Change </button>
-</form>
 <div id="toChange"> This is going to be changed when you change the drop down selection</div>
 <div id="test"> This is going to be changed when you change the drop down selection</div>
